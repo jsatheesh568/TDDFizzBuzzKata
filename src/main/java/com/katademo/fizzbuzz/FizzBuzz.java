@@ -19,5 +19,18 @@ public class FizzBuzz {
 			return String.valueOf(number);
 		}
 	}
-	
+
+	public String convertWithContains(int number) {
+		boolean isFizz = (number % 3 == 0) || String.valueOf(number).contains("3");
+		boolean isBuzz = (number % 5 == 0) || String.valueOf(number).contains("5");
+		if (isFizz && isBuzz) {
+			return "FizzBuzzBuzz";
+		} else if (isFizz) {
+			return "Fizz";
+		} else if (isBuzz) {
+			return "Buzz";
+		} else {
+			return String.valueOf(number);
+		}
+	}
 }
